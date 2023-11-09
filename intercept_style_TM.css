@@ -1,0 +1,63 @@
+/* Bloque Text entry */
+.Skin .MC .Inner .InnerInner .QuestionBody .TextEntryBox{
+margin-top: 10px !important;
+padding: 7px !important;
+}
+ 
+/* Borde Text entry  */
+.Skin label.MultipleAnswer.q-checked+input, .Skin label.MultipleAnswer.q-checked+textarea, .Skin label.SingleAnswer.q-checked+input, .Skin label.SingleAnswer.q-checked+textarea{
+    border-color: #000000 !important;
+}
+ 
+/*  Espacio entre opciones */
+.Skin label.MultipleAnswer, .Skin label.SingleAnswer{
+    padding: 7px 4% !important;
+}
+ 
+ 
+/* Estilo para botón Enviar */
+.Skin #Buttons{
+    padding: 0px 10px 5px 10px !important;
+    margin-bottom: 40px;
+}
+ 
+ 
+/* Oculta la barra de desplazamiento en WebKit browsers */
+::-webkit-scrollbar {
+    display: none; /* para Chrome, Safari, y Opera */
+}
+ 
+/* Oculta la barra de desplazamiento en IE, Edge */
+body {
+    -ms-overflow-style: none; 
+}
+ 
+/* Oculta la barra de desplazamiento en Firefox */
+body {
+    scrollbar-width: none;  /* para Firefox */
+}
+ 
+/* Estilo para mensajes de error */
+.Skin .ValidationError{
+    font-size: 11px;
+    text-align: center;
+    padding: 0px 0 0px 0;
+    color: #d43a58;
+}
+
+/* CSS para ocultar el TextEntryBox por defecto si q-checked no está presente */
+.Selection.reg .LabelWrapper .TextEntryBox {
+  display: block; 
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, max-height 0.5s ease, transform 0.5s ease;
+  overflow: hidden;
+}
+
+/* CSS para mostrar el TextEntryBox cuando q-checked está presente */
+.Selection.reg .q-checked + .LabelWrapper .TextEntryBox {
+  opacity: 1;
+  max-height: 50px;
+  transform: translateY(0);
+}
